@@ -1,0 +1,6 @@
+---
+name: init-db
+dependencies:
+  - golang
+files:
+  - init-db/**/*

@@ -3,6 +3,7 @@ name: init-db
 
 templates: {}
 
-packages: []
+packages:
+- init-db
 
 properties: {}
