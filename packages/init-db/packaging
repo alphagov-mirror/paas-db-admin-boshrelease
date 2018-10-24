@@ -9,7 +9,7 @@ export PATH=${GOROOT}/bin:${PATH}
 PACKAGE_NAME=init-db
 mkdir -p ${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}
 cp -a ${BOSH_COMPILE_TARGET}/${PACKAGE_NAME}/* ${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}
-export GOPATH=${BOSH_INSTALL_TARGET}:${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}/Godeps/_workspace
+export GOPATH=${BOSH_INSTALL_TARGET}
 go install ${PACKAGE_NAME}
 
 # Clean up pkg artifacts

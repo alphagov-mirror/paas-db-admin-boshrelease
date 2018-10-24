@@ -1,9 +1,25 @@
 ---
 name: init-db
 
-templates: {}
+templates:
+  pre-start.sh.erb: bin/pre-start
+  config.json.erb: config.json
 
 packages:
 - init-db
 
-properties: {}
+properties:
+  init-db.connection_string:
+    example: "postgres://user:password@localhost:5432/postgres"
+  init-db.databases:
+    description: |
+      The list of databases to be created. The owner should be present in `databases.roles.*.name`.
+    example:
+      - name: uaa
+        owner: uaa
+  init-db.roles:
+    description: |
+      The list of database Roles to be created.
+    example:
+      - name: uaa
+        password: database-password-for-user-uaa
