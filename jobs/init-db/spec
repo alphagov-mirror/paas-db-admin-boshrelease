@@ -17,9 +17,11 @@ properties:
     example:
       - name: uaa
         owner: uaa
+        extensions: ["citext", "pgcrypto"]
   init-db.roles:
     description: |
       The list of database Roles to be created.
     example:
       - name: uaa
         password: database-password-for-user-uaa
+        parent_role: dbadmin
